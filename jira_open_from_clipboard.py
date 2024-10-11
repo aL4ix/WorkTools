@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import re
 import time
 import webbrowser
@@ -7,6 +9,7 @@ import pyperclip
 
 HOST = ''
 LIST_OF_PROJECTS = ['BE', 'FE']
+
 
 def main():
     print('Watching for jira links')
