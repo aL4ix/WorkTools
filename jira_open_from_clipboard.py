@@ -12,7 +12,7 @@ def main():
     print('Watching for jira links')
     while True:
         clipboard = pyperclip.paste()
-        projects = LIST_OF_PROJECTS.join('|')
+        projects = '|'.join(LIST_OF_PROJECTS)
         if re.match(r'('+projects+r')-\d+(\r\n)?$', clipboard):
             pyperclip.copy('')
             webbrowser.open(
