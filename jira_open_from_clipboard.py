@@ -5,7 +5,7 @@ import webbrowser
 import pyperclip
 
 
-HOST = 'https://YOUR_SITE_HERE.atlassian.net'
+HOST = ''
 LIST_OF_PROJECTS = ['BE', 'FE']
 
 def main():
@@ -16,7 +16,7 @@ def main():
         if re.match(r'('+projects+r')-\d+(\r\n)?$', clipboard):
             pyperclip.copy('')
             webbrowser.open(
-                f'{HOST}/browse/{clipboard}')
+                f'https://{HOST}.atlassian.net/browse/{clipboard}')
         time.sleep(1)
 
 
