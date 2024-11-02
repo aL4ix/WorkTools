@@ -6,7 +6,6 @@ import webbrowser
 
 import pyperclip
 
-
 HOST = ''
 LIST_OF_PROJECTS = ['BE', 'FE']
 
@@ -15,9 +14,8 @@ def main():
     if HOST == '':
         print('Please define a HOST')
         return
-
-    print('Watching for jira links')
     projects = '|'.join(LIST_OF_PROJECTS)
+    print('Watching for jira links')
     while True:
         clipboard = pyperclip.paste()
         if re.match(r'('+projects+r')-\d+(\r\n)?$', clipboard):
